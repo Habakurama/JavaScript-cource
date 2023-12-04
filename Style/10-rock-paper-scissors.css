@@ -1,0 +1,36 @@
+body{
+   background-color: rgb(25, 25, 25);
+   color: white;
+   font-family: Arial;
+  
+}
+.title{
+   font-size: 28px;
+}
+.icons{
+   height: 60px; 
+   width: 50px;
+}
+.move-button{
+   background-color: black;
+   background-color: transparent;
+   border: 3px solid rgb(29, 163, 19);
+   height: 120px;
+   width: 120px;
+   border-radius: 60px;
+   margin: 6px;
+}
+.results{
+   font-size: 25px;
+   font-weight: bold;
+   margin-top: 40px;
+}
+.score{
+   margin-top: 50px;
+}
+.reset-score-button{
+   background-color: white;
+   border: none;
+   padding: 9px 15px;
+   cursor: pointer;
+}

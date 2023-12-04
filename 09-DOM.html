@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM</title>
+</head>
+<body>
+   <button>hello</button>
+   <button class="jsbutton">second button</button>
+   <script>
+     console.log( document.querySelector('button').innerHTML);
+     document.querySelector('button').  innerHTML='changed';
+
+     console.log(document.querySelector('.jsbutton'));
+     const elementsHtml=document.querySelector('.jsbutton');
+console.log(elementsHtml);
+
+      /*    
+console.log(document.title);
+document.title='changed'
+console.log(document.body);//this is html code inside java script
+console.log(typeof document.body);
+console.log(document.body.innerHTML);
+document.body.innerHTML='changed'
+*/
+   </script> 
+</body>
+</html> 

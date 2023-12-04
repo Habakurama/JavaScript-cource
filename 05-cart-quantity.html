@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cart Quantity</title>
+</head>
+<body>
+   <button onclick="
+      console.log(`Cart quantity: ${Cartquantity}`);
+      ">Show Quantity</button>
+
+   <button onclick="
+      Cartquantity =Cartquantity+1;
+      console.log(`Cart quantity: ${Cartquantity}`);
+      ">Add to cart</button>
+
+   <button onclick="
+      Cartquantity=Cartquantity+2;
+      console.log(`Cart quantity: ${Cartquantity}`);
+      ">+2</button>
+
+   <button onclick="
+   Cartquantity=Cartquantity+3;
+   //Cartquantity +=2; the same with above
+   console.log(`Cart quantity: ${Cartquantity}`);
+   ">+3</button>
+    
+      <button onclick="
+      Cartquantity=0;// re assigin to Cartquantity
+      console.log('Cart Was Reset');
+      console.log(`Cart quantity: ${Cartquantity}`);// {}interpretion its used to insert value into string
+      //this is called templete string``
+      ">Reset Cart</button>
+      
+   <script>
+ let Cartquantity=0;
+   </script> 
+</body>
+</html>
