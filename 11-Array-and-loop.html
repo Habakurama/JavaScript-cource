@@ -55,7 +55,7 @@
       console.log(value);
    }*/
 // accumurator pattern
-   const nums= [1, 1, 3];//array numbers
+   /*const nums= [1, 1, 3];//array numbers
    let total=0;//accumurator variable to store sum of array numbers
    for(i=0; i<nums.length; i++){
       const num = nums[i];
@@ -71,6 +71,48 @@
       
    }
    console.log(numsDoubled);
+   */
+  const array1=[1,3,4]
+  Array2=array1.slice()//working its functionality alone; 
+  const  [firtvalue,seconvalue,thirdvalue]=[1,2,3,4];
+  for(let i=1; i<=10;i++){
+   if(i%3===0){
+      continue;
+   }
+   console.log(i);
+   if(i===9){
+      break;
+   }
+  }
+  Array2.push(99)
+  console.log(array1)
+  console.log(Array2)
+  let i=1;
+  while(i<=10){
+   if (i%3===0) {
+      i++;
+      continue;
+   }
+   console.log(i)
+   i++;
+  }
+  function doublearray(nums){
+  
+  numsDoubled=[];//accumurator variable
+   for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      if(num===0){
+         return numsDoubled;
+      }
+     
+      numsDoubled.push(num * 2);
+      
+   }
+   return numsDoubled;
+}
+console.log(doublearray([12,23,56,0,12]));
+console.log(doublearray([1,0,3,5,0,12]));
+console.log(doublearray([9,7,0,12,2,6]));
    </script> 
 </body>
 </html> 

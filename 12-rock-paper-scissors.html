@@ -4,16 +4,16 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>rock-paper-scssors game</title>
- <link rel="stylesheet" href="Style/10-rock-paper-scissors.css">
+ <link rel="stylesheet" href="Style/12-rock-paper-scissors.css">
    </head>
  <body>
    
-   <script src ="Scripts/10-rock-paper-scissors.js"></script> 
+   <script src ="Scripts/12-rock-paper-scissors.js"></script> 
       <p class="title">Rock Paper Scissors</p>
       <button onclick="
       playGame('Rock');
          " class="move-button">.
-         <img src="rock image/rock.png" alt="" class="icons"></button>
+         <img src="rock image/rock.png" alt="" class="icons">.</button>
 
       <button onclick="
       playGame('Paper');
@@ -22,6 +22,7 @@
          <button onclick="
       playGame('Scissors');
          " class="move-button"> <img src="rock image/sissor.png" alt="" class="icons">.</button>
+
          <p class="js-results results"></p>
          <p class="js-move"></p>
          <p class="js-score score" ></p>
@@ -33,6 +34,11 @@
          localStorage.removeItem(score);
          updateScoreElement(); 
          " class="reset-score-button">Reset Score</button>
+
+         <button class="auto-play-button"onclick="
+         autoPlay();
+         ">Auto play
+         </button>
 
       
    </body>

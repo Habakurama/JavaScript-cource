@@ -1,25 +1,53 @@
-let Todolist=['make dinner', 'wash dishes', 'watch youtube'];
 
-let TodolistHtml = '';
+let Todolist=[{name:'make dinner', datedue:'12/04/2023'},
+{name:'wash dishes',datedue:'12/04/2023'},
+{name: 'watch youtube',datedue:'12/04/2023'}];
 
-for(let i=0 ; i< Todolist.length; i++){
-const todo=Todolist[i];
-const html=`<p> ${todo}</p>`
-TodolistHtml += html;
+renderTodolist();
+
+function renderTodolist(){
+ let TodolistHtml = '';
+
+   for(let i=0 ; i< Todolist.length; i++){
+   const todoObject=Todolist[i];
+   //const name=todoObject.name;
+   //const datedue=todoObject.datedue;
+
+   const {name , datedue}=todoObject;//destracting property techinics
+   const html=`
+   <div>${name}</div>
+   <div>${datedue}</div>
+    <button onclick = "
+    Todolist.splice(${i}, 1);
+    renderTodolist(); 
+    " class="delete-todo-button">Delete</button>
+    
+    `//generating the Html (insisted of writing all in html we looping its in array and generating its in java scritps)
+   TodolistHtml += html;
+   }
+   console.log(TodolistHtml);
+
+   document.querySelector('.js-todo-list')
+   .innerHTML = TodolistHtml;
 }
-console.log(TodolistHtml);
-
-document.querySelector('.js-todo-list')
-.innerHTML = TodolistHtml;
-
 
 function addTodolist() {
- const inputElement= document.querySelector('
- .js-name-input'); 
+ const inputElement= document.querySelector('.js-name-input'); 
  const name=inputElement.value;
+
+ const dateInputElement=document.querySelector('.js-date-input');
+ const datedue=dateInputElement.value;
  console.log(name);
- Todolist.push(name);
+ //add to the list
+ Todolist.push({
+   // name:name,
+   // datedue:datedue
+    name,
+    datedue //short hand property
+ });
  console.log(Todolist);
  inputElement.value='';
+
+ renderTodolist();
    
 }

@@ -16,21 +16,35 @@ ties: 0
 }
 */
 
+let isAutoplaying = false;
+let intervalId;
 
+function autoPlay() {
+   if (!isAutoplaying) {
+   const intervalId = setInterval(function(){
+         const playerMove=pickcomputerMove();
+         playGame(playerMove); 
+      }, 1000);
+      isAutoplaying = true;
+   }
+   else{
+      clearInterval(intervalId);
+      isAutoplaying = false;
+   }
+}
 function playGame(playerMove){
    const computerMove= pickcomputerMove();
    let result='';
-
    if(playerMove==='Scissors'){
-   if(computerMove=== 'Rock'){
-      result= 'you win';
-      }
-      else if (computerMove=== 'Paper'){
-      result='you lose';
-      }
-      else if (computerMove=== 'Scissors'){
-      result='Tie' ;
-      }
+      if(computerMove=== 'Rock'){
+         result= 'you win';
+         }
+         else if (computerMove=== 'Paper'){
+         result='you lose';
+         }
+         else if (computerMove=== 'Scissors'){
+         result='Tie' ;
+         }
    }else if(playerMove==='Paper'){
    if(computerMove=== 'Rock'){
       result= 'You win';

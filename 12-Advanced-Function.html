@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Advanced function</title>
+
+</head>
+<body>
+ 
+   <script>
+ /* function greeting(){
+   console.log('hello');
+  }
+  greeting();
+
+  //function is value
+  const function1=function greeting(){
+   console.log('hello ALOYS');
+  };
+  console.log(function1);
+  console.log(typeof function1);
+  function1();
+
+
+  const object1={
+   num:2,
+   fun: function greeting(){
+      console.log('hello4');
+   }
+
+  };
+  object1.fun();
+
+  function display(param){
+console.log(param);
+  }
+  display(3)//passing value into function
+
+  function run(pram) {
+pram()
+  } 
+  console.log(function (){
+   console.log('hello6');//passing function into anather function(callback function)
+  });*/
+
+
+
+//function we want to run in future
+  setTimeout(function () {
+   console.log('time out')
+   console.log('time out2')
+  }, 3000);
+  console.log('next line')//synchronous code its does not waits time setted to finish
+
+  setInterval(function () {
+   console.log('time out3')
+  },3000)
+   </script> 
+</body> 
+</html> 
