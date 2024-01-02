@@ -7,8 +7,21 @@
 
 </head>
 <body>
- 
+ <button onclick="" class="js_button">click</button>
    <script>
+   const buttonElement = document.querySelector('.js_button');
+   const eventsListener= ()=>{
+    //it has two prametor which is events that will happen and function 
+    console.log('click');
+   }
+   buttonElement.addEventListener('click', eventsListener);
+
+   buttonElement.removeEventListener('click',eventsListener );
+
+   buttonElement.addEventListener('click',()=>{
+    console.log('click');
+   });
+
  /* function greeting(){
    console.log('hello');
   }
@@ -47,7 +60,7 @@ pram()
 
 
 //function we want to run in future
-  setTimeout(function () {
+  /*setTimeout(function () {
    console.log('time out')
    console.log('time out2')
   }, 3000);
@@ -56,6 +69,44 @@ pram()
   setInterval(function () {
    console.log('time out3')
   },3000)
-   </script> 
+  
+//this foreach() function is prefered way to lolp(step by step) to the array
+  [
+    'make dinner',
+    'wash dishes',
+    'watch movies'
+  ].forEach((value, index)=>{ 
+    if (value=== 'wash dishes') {
+      return;
+    }
+    console.log(index);
+    console.log(value);
+
+  });
+
+  const arrowfunction = ()=>{
+    console.log('hello')
+  }
+  arrowfunction();
+  // shortcut for arrow function
+
+  const oneprametorarrowfunction = param=>{
+    console.log(param+1);
+  }
+  oneprametorarrowfunction(8); 
+
+  const onelinearrowfunction = () => 6+8;
+  console.log(onelinearrowfunction());
+
+  const object2 = {
+
+    method: ()=>{
+//arrow function in objects
+    },
+    method(){
+//this is recomanded to use 
+   } };
+   */
+   </script>  
 </body> 
 </html> 

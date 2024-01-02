@@ -10,18 +10,16 @@
    
    <script src ="Scripts/12-rock-paper-scissors.js"></script> 
       <p class="title">Rock Paper Scissors</p>
-      <button onclick="
-      playGame('Rock');
-         " class="move-button">.
-         <img src="rock image/rock.png" alt="" class="icons">.</button>
+      <button class="move-button js-rock-button">
+         <img src="image/rock-emoji.png" alt="" class="icons">.</button>
 
       <button onclick="
       playGame('Paper');
-         " class="move-button"> <img src="rock image/paper.png" alt="" class="icons">.</button>
+         " class="move-button"> <img src="image/paper-emoji.png" alt="" class="icons">.</button>
 
          <button onclick="
       playGame('Scissors');
-         " class="move-button"> <img src="rock image/sissor.png" alt="" class="icons">.</button>
+         " class="move-button"> <img src="image/scissors-emoji.png" alt="" class="icons">.</button>
 
          <p class="js-results results"></p>
          <p class="js-move"></p>
@@ -35,11 +33,11 @@
          updateScoreElement(); 
          " class="reset-score-button">Reset Score</button>
 
-         <button class="auto-play-button"onclick="
+         <button class="auto-play-button" onclick="
          autoPlay();
-         ">Auto play
+         ">
+         Auto play
          </button>
-
       
       </body>
 </html>
